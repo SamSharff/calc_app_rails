@@ -11,7 +11,7 @@ class CalculationsController < ApplicationController
     if calculation.save
       render json: calculation
     else
-      render json: { erros: calculation.errors.full_messages }, status: :unprocessable_entity
+      render json: { errors: calculation.errors.full_messages }, status: :unprocessable_entity
     end
   end
 end
